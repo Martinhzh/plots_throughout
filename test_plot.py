@@ -7,6 +7,8 @@ import matplotlib
 matplotlib.rcParams['text.usetex'] = True
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 matplotlib.rcParams['font.family'] = 'serif'
+matplotlib.rcParams['font.size'] = 12
+
 # requirements
 # 1) dark background
 # 2) both axis should start at 0
@@ -46,6 +48,7 @@ sa_x_p2 = scalable_agent.values[2::, 0]
 sa_y_p2 = scalable_agent.values[2::, 1]
 
 
+
 # Configuration
 ax = plt.axes()
 # ax.set_axisbelow(True)
@@ -53,15 +56,15 @@ ax = plt.axes()
 #     spine.set_visible(False)
 
 # Title and label
-plt.title('VizDoom Throughput, FPS')
-plt.xlabel('Total num envs')
-plt.ylabel('fps, frameskip$=4$')
+plt.title('VizDoom Throughput, FPS', fontsize=20)
+plt.xlabel('Total num envs', fontsize=16)
+plt.ylabel('fps, frameskip$=4$', fontsize=16)
 
 
 
 
-# for spine in ax.spines.values():
-#     spine.set_visible(False)
+for spine in ax.spines.values():
+    spine.set_visible(False)
 
 # hide tick of axis
 ax.xaxis.tick_bottom()
