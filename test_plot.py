@@ -8,7 +8,7 @@ matplotlib.rcParams['text.usetex'] = True
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 matplotlib.rcParams['font.family'] = 'serif'
 matplotlib.rcParams['font.size'] = 12
-
+plt.rcParams["figure.figsize"] = (10,6)
 # requirements
 # 1) dark background
 # 2) both axis should start at 0
@@ -63,8 +63,8 @@ plt.ylabel('fps, frameskip$=4$', fontsize=16)
 
 
 
-for spine in ax.spines.values():
-    spine.set_visible(False)
+# for spine in ax.spines.values():
+#     spine.set_visible(False)
 
 # hide tick of axis
 ax.xaxis.tick_bottom()
